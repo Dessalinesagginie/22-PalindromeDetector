@@ -9,20 +9,31 @@
 // "Was it a car or a cat I saw?"
 
 // Reverse each word in a sentence
+
 // and display it on the screen in the same order.
 
 // For example, the sentence "This is an example"
 
 // would become `siht si na elpmaxe.`
 
-// "We ran"
 
-// "eW nar"
 
-const words = ["We", "ran"];
-for (let i = words.length - 1; i >= 0; i--) {
-    console.log(words[i]);
+//          012345
+// var sent = "we ran"
+
+
+var sent = "Otto needs Xanax."
+// var sent1 = "Otto bought a racecar he cannot afford."
+// var sent2 = "Otto lost the deed to his house."
+
+// i:6-1=   5,4,3,2,1,0,-1
+// i >= 0?  t,t,t,t,t,t,f
+// sent[i]; n,a,r,_,e,w
+for (var i = sent.length-1; i >= 0; i--) {
+    document.getElementById("demo").innerHTML = sent[i];
 }
+
+// $("#first-number").text(firstNumber);  
 
 // const str = "Hello";
 // let reversedStr = '';
@@ -31,8 +42,9 @@ for (let i = words.length - 1; i >= 0; i--) {
 // }
 // console.log(reversedStr); // Output: "olleH"
 
-// If the word is a palindrome, have it display in red.
 
+
+// If the word is a palindrome, have it display in red.
 
 // Notes:
 // ======
@@ -52,40 +64,32 @@ for (let i = words.length - 1; i >= 0; i--) {
 // Do not use the reverse() method.
 
 
-// Reverse each word in a sentence
 
 
-// Create an Array
-const sentence = ["This is an example"];
-// elpmaxe na si siht
+// Instructions
+// A palindrome is a sentence that reads the same backwards and forwards: "Was it a car or a cat I saw?"
 
-var word = "This";
-for (var i = 0; i < word.length; i--) {
-console.log("My name contains the letter " + word [i] + ".");
-}
-// Reverse the Array
+// Reverse each word in a sentence and display it on the screen in the same order. For example, the sentence This is an example would become siht si na elpmaxe. If the sentence is a palindrome, have it display in red.
 
-// For example, the sentence "This is an example"
-// would become `siht si na elpmaxe.`
-
-// If the word is a palindrome, have it display in red.
-
-
-// Notes:
-// ======
+// NOTE:
 
 // Remove periods.
+
 // Add the result to the page in the div with the id "Result".
-// Here are some test phrases to put in your JavaScript:
-// "Otto bought a racecar he cannot afford."
-// "Otto lost the deed to his house."
-// "Otto needs Xanax."
 
-
-// Bonus:
-// ======
+// BONUS:
 
 // Remove all "special characters" (commas, periods, etc).
+
 // Do not use the reverse() method.
+
+// Here are some test phrases to put in your JavaScript:
+
+// "Otto bought a racecar he cannot afford."
+
+// "Otto lost the deed to his house."
+
+// "Otto needs Xanax."
+
 
 
