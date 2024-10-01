@@ -15,33 +15,6 @@
 
 // would become `siht si na elpmaxe.`
 
-//we ran
-//ew nar
-
-// var str = "we ran"
-// var strSplit = str.split(" ")    
-// var words = []
-
-// words.push(strSplit[0])
-// words.push(strSplit[1]) 
-// console.log(words)
-
-
-// words.pop()
- 
-// document.getElementById("demo").innerHTML = words;  .Spi
-// console.log(words.pop())
-// document.getElementById("demo").innerHTML = words;
-
-// words = ["we "," ran "]
-// i: 1, 0, -1
-
-// we
-// ran
-// we
-// ran
-
-
 var str ="we ran" 
 var strSplit = str.split(" ") 
 var words = ["we "," ran "] 
@@ -63,12 +36,6 @@ for (var i = 0; i < words.length; i++) {
     console.log(words[i])
 }
 
-
-// var sent1 = "Otto bought a racecar he cannot afford."
-// var sent2 = "Otto lost the deed to his house."
-
-// If the word is a palindrome, have it display in red.
-
 // Notes:
 // ======
 
@@ -85,9 +52,6 @@ for (var i = 0; i < words.length; i++) {
 
 // Remove all "special characters" (commas, periods, etc).
 // Do not use the reverse() method.
-
-
-
 
 // Instructions
 // A palindrome is a sentence that reads the same backwards and forwards: "Was it a car or a cat I saw?"
