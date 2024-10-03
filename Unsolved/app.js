@@ -17,7 +17,7 @@
 
 var str ="we ran" 
 var strSplit = str.split(" ") 
-var words = ["we "," ran "] 
+var words = [] 
 
 words.push(strSplit[0]) 
 words.push(strSplit[1]) 
@@ -34,8 +34,10 @@ for (var i = words.length-1; i >= 0; i--) {
 
 for (var i = 0; i < words.length; i++) { 
     console.log(words[i])
-}
 
+}
+console.log (words [1])
+console.log(words[0]) 
 // Notes:
 // ======
 
