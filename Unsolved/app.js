@@ -1,5 +1,5 @@
 
-var str ="we ran" 
+var str = "we ran" 
 var strSplit = str.split(" ") 
 var words = [] 
 
@@ -9,14 +9,25 @@ words.push(strSplit[1])
 console.log(words.pop()) 
 console.log(words.pop())
 
-words.push("n","a","r"," ")
+//push reverse of words = we ran, into words []
+words.push("nar")
+words.push("ew")
+console.log(words)
 
-words.push("e","w")
+// reverse the string - "nar"
+ 
+var word1 = ["nar"]
 
-for (var i = 0; i < words.length; i++) { 
-    console.log(words[i])
-}
+// var word1Split = word1.split(" ") 
+var let = []
 
-document.getElementById("demo").innerHTML=(words);
+console.log(let.pop())
+console.log(let.pop())
+
+var myNames = ["Nicholas", "Andrew", "Maxwell", "Morgan"]
+var my4Names = myNames.join(" ") // "Nicholas Andrew Maxwell Morgan"
+console.log(my4Names); // "Nicholas Andrew Maxwell Morgan"
+
+
 
 
