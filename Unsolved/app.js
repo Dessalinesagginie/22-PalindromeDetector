@@ -7,23 +7,23 @@ words.push(strSplit[0]) //pushes we[0] into Words array
 words.push(strSplit[1]) //pushes ran[1] into Words array
 
 // console.log items popped into words[] 
-var word = words.pop()
-var word = word.length
+var words2 = words.pop()
+var words3 = words.pop()
 
 //Reverse words2
 
-for (var i = word.length-1; i >= 0; i--) { 
-    console.log(word[i])
+for (var i = words.length-1; i >= 0; i--) { 
+    // document.getElementById("demo").innerHTML = words[i];
+    // console.log(words[0])
+    // console.log(words[1])
+    console.log(words[i])
 }
 // ran  r
 // ran  a
 // ran  n
 
-var sent = "Otto needs Xanax."
 
-for (var i = sent.length-1; i >= 0; i--) { 
-    console.log(sent[i])
-}
+
 
 
 

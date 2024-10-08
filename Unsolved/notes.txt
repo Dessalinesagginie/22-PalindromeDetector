@@ -134,7 +134,8 @@ for (var i = 0; i < words.length; i++) {
 
 
 
-
+// console.log(words.pop()) // removes ran and puts back in words array first
+// console.log(words.pop()) // removes we and puts back in words array 2nd
 
 
 
