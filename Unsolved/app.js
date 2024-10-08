@@ -7,48 +7,26 @@ words.push(strSplit[0]) //pushes we[0] into Words array
 words.push(strSplit[1]) //pushes ran[1] into Words array
 
 // console.log items popped into words[] 
-var words2 = words.pop()
-var words3 = words.pop()
+var word = words.pop()
+var word1 = words.pop()
 
 //Reverse words2
 
-for (var i = words.length-1; i >= 0; i--) { 
-    // document.getElementById("demo").innerHTML = words[i];
-    // console.log(words[0])
-    // console.log(words[1])
-    console.log(words[i])
+for (var i = word.length-1; i >= 0; i--) { 
+    console.log(word[i])
 }
 // ran  r
 // ran  a
 // ran  n
 
+for (var i = word1.length-1; i >= 0; i--) { 
+    console.log(word1[i])
+}
+//we w
+//we e
 
+var sent = "Otto needs Xanax."
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var myNames = ["Nicholas", "Andrew", "Maxwell", "Morgan"]
-// var my4Names = myNames.join(" ") // "Nicholas Andrew Maxwell Morgan"
-// console.log(my4Names); // "Nicholas Andrew Maxwell Morgan"
-
-// var str2 ="ran we"
-// var str2Split = str2.split(" ")
-// var words2 = []
-
-// words2.push(str2Split[0]) //pushes we[0] into Words array 
-// words2.push(str2Split[1])
-
-// for (var i = 0; i < words2.length; i++) { 
-//     console.log(words2[i])
-// }
-// console.log(words2)
+for (var i = sent.length-1; i >= 0; i--) { 
+    console.log(sent[i])
+}
