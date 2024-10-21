@@ -1,12 +1,7 @@
 
+// in : "This is an example"
+// out: "sihT is na elpmaxe"  
 
-
-
-// in : This is example
-// out: elpmaxe si sihT 
-
-// str: We ran
-// stk: [We, ran]
 
 // "a" + "b" = "ab"
 // w[0] + w[1]
@@ -16,7 +11,24 @@
 // var my4Names = myNames.join(" ") // "Nicholas Andrew Maxwell Morgan"
 // console.log(my4Names); // "Nicholas Andrew Maxwell Morgan"
 
+Concatonation
 
+The concat() method joins two or more strings.
+
+Join "sea" and "food":
+
+seafood
+
+<script>
+let text1 = "sea";
+let text2 = "food";
+let result = text1.concat(text2);
+
+document.getElementById("demo").innerHTML = result;
+</script>
+
+
+Pushing and popping
 
 // var str = "we ran"
 // var strSplit = str.split(" ")    
@@ -29,18 +41,6 @@
 
 // words.pop()
  
-// document.getElementById("demo").innerHTML = words;  .Spi
-// console.log(words.pop())
-// document.getElementById("demo").innerHTML = words;
-
-// words = ["we "," ran "]
-// i: 1, 0, -1
-
-// we
-// ran
-// we
-// ran
-
 
 var str ="we ran" 
 var strSplit = str.split(" ") 
@@ -52,83 +52,33 @@ words.push(strSplit[1])
 console.log(words.pop()) 
 console.log(words.pop())
 
-for (var i = words.length-1; i >= 0; i--) { 
-    
-    console.log(words[i])
+
+Traditional Loops
+
+Backwards
+for (var i = array.length-1; i >= 0; i--) { 
+    console.log(array[i])
 }
 
-for (var i = 0; i < words.length; i++) { 
-    console.log(words[i])
+Forwards
+for (var i = 0; i < array.length; i++) { 
+    console.log(array[i])
 }
 
+Habits in need of Adjustment
 
-// Reverse in Place w/Palindrome Detector
+1. Align code,
+2. Write 1 comment per goal, 
+3. Write 1 line of code,  
+4. Select more sensible and straight forward variables,
+5. test in debugger, 
+6. Use all developer's tool controls when stepping thru code
+7. start process all over 
 
-
-// Instructions
-// ============
-
-// A palindrome is a sentence that reads the same backwards and forwards:
-// "Was it a car or a cat I saw?"
-
-// Reverse each word in a sentence
-
-// and display it on the screen in the same order.
-
-// For example, the sentence "This is an example"
-
-// would become `siht si na elpmaxe.`
-
-// Notes:
-// ======
-
-// Remove periods.
-// Add the result to the page in the div with the id "Result".
-// Here are some test phrases to put in your JavaScript:
-// "Otto bought a racecar he cannot afford."
-// "Otto lost the deed to his house."
-// "Otto needs Xanax."
-
-
-// Bonus:
-// ======
-
-// Remove all "special characters" (commas, periods, etc).
-// Do not use the reverse() method.
-
-// Instructions
-// A palindrome is a sentence that reads the same backwards and forwards: "Was it a car or a cat I saw?"
-
-// Reverse each word in a sentence and display it on the screen in the same order. For example, the sentence This is an example would become siht si na elpmaxe. If the sentence is a palindrome, have it display in red.
-
-// NOTE:
-
-// Remove periods.
-
-// Add the result to the page in the div with the id "Result".
-
-// BONUS:
-
-// Remove all "special characters" (commas, periods, etc).
-
-// Do not use the reverse() method.
-
-// Here are some test phrases to put in your JavaScript:
-
-// "Otto bought a racecar he cannot afford."
-
-// "Otto lost the deed to his house."
-
-// "Otto needs Xanax."
+ 
 
 
 
-
-
-
-
-// console.log(words.pop()) // removes ran and puts back in words array first
-// console.log(words.pop()) // removes we and puts back in words array 2nd
 
 
 
