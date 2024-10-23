@@ -2,7 +2,6 @@
 // in : "This is an example"
 // out: "sihT is na elpmaxe"  
 
-
 // "a" + "b" = "ab"
 // w[0] + w[1]
 // var newW = w[i] + newW
@@ -70,10 +69,11 @@ Habits in need of Adjustment
 1. Align code,
 2. Write 1 comment per goal, 
 3. Write 1 line of code,  
-4. Select more sensible and straight forward variables,
-5. test in debugger, 
-6. Use all developer's tool controls when stepping thru code
-7. start process all over 
+4. Select more sensible and straight forward descriptive variables,
+5. Change all variables with F2
+6. test in debugger, 
+7. Use all developer's tool controls when stepping thru code
+8. start process all over 
 
  
 
