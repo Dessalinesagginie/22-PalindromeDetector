@@ -5,28 +5,27 @@ var sentenceArray = sentence.split(" ")
 function reverseWord(word) {
     
     //var word = "This"
-    for (var i = word.length-1; i >= 0; i--) { 
-        console.log(word[i])
+    var letters = []  
+    for (var i = word.length-1; i >= 0; i--) {    
+        letters.push(word[i])
+        
     }
-    // "sihT"
-    return word
+    return letters
 }    
-
 for (var i = 0; i < sentenceArray.length; i++) {
     var word = sentenceArray[i]
     
     var wordrev = reverseWord(word)
-}
+    console.log(wordrev) 
+    // how do I print "sihT" on one line
+    // console.log(wordrev)
+}   
 
-for (var i = word.length-1; i >= 0; i--) { 
-    console.log(word[i])
-}  
+
+ 
 
 
-// how do I take the letters and get the string I want?
 
-   
 
-    
 
  
