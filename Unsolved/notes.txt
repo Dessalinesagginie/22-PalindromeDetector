@@ -1,45 +1,17 @@
-
-// in : "This is an example"
-// out: "sihT is na elpmaxe"  
-
-// "a" + "b" = "ab"
-// w[0] + w[1]
-// var newW = w[i] + newW
-
-// var myNames = ["Nicholas", "Andrew", "Maxwell", "Morgan"]
-// var my4Names = myNames.join(" ") // "Nicholas Andrew Maxwell Morgan"
-// console.log(my4Names); // "Nicholas Andrew Maxwell Morgan"
-
-Concatonation
+---Concatonation
 
 The concat() method joins two or more strings.
 
-Join "sea" and "food":
+"a" + "b" = "ab"
 
-seafood
+var w = "cd"
+        d      c
+var x = w[1] + w[0] //"dc"
 
-<script>
-let text1 = "sea";
-let text2 = "food";
-let result = text1.concat(text2);
-
-document.getElementById("demo").innerHTML = result;
-</script>
+var newW = w[i] + newW
 
 
-Pushing and popping
-
-// var str = "we ran"
-// var strSplit = str.split(" ")    
-// var words = []
-
-// words.push(strSplit[0])
-// words.push(strSplit[1]) 
-// console.log(words)
-
-
-// words.pop()
- 
+---Pushing and popping
 
 var str ="we ran" 
 var strSplit = str.split(" ") 
@@ -52,7 +24,7 @@ console.log(words.pop())
 console.log(words.pop())
 
 
-Traditional Loops
+---Traditional Loops
 
 Backwards
 for (var i = array.length-1; i >= 0; i--) { 
@@ -64,7 +36,27 @@ for (var i = 0; i < array.length; i++) {
     console.log(array[i])
 }
 
-Habits in need of Adjustment
+p0 initialization: var i = 0
+p1 conditional: i < array.length
+p2 body: { ... }
+p3 inc/dec: i ++
+
+first iteration: p0, p1, p2, p3
+p1, p2, p3
+p1, p2, p3
+...
+last iteration: p1
+
+---Function---
+function add(x, y) {
+    // write var for each parameter 
+    // var x = (value passed in for x)
+    // var y = (        "       for y)
+
+    return x + y
+}
+add(1, 2) 
+---Habits in need of Adjustment
 
 1. Align code,
 2. Write 1 comment per goal, 
@@ -75,8 +67,9 @@ Habits in need of Adjustment
 7. Use all developer's tool controls when stepping thru code
 8. start process all over 
 
- 
-
+9. unless a variable is declared within a function, it does not exist inside that function  
+a function must return something
+10. variable must exist before use 
 
 
 
