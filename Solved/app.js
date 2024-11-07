@@ -62,5 +62,7 @@ function palindromeDetector(s) {
   }
 
   // Replaces the contents of the "result" div with the merged showOnPage array.
-  document.getElementById("result").innerHTML = showOnPage.join(" ");
+  document.getElementById("result").innerHTML = showOnPage.join(" "); 
 }
+
+  palindromeDetector(sentence1)

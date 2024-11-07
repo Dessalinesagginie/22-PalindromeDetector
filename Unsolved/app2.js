@@ -1,4 +1,7 @@
-var sentence = "This is an example."
+var sentence =  "Otto lost the deed to his house."
+// * "Otto bought a racecar he cannot afford."
+// * "Otto needs Xanax."
+
 var sentenceArray = sentence.split(" ")
 
 function reverseWord(word) {
@@ -10,8 +13,8 @@ function reverseWord(word) {
 }
 
 function revWordsSent(sentence) {
-    var cleanedSentence = removePeriod(sentence)
-    var words = cleanedSentence.split(" ")
+    var newSentence = removePeriod(sentence)
+    var words = newSentence.split(" ")
     var revWords = []
 
     for (var i = 0; i < words.length; i++) {
@@ -33,47 +36,14 @@ function removePeriod(sentence) {
 }
 
 var revString = revWordsSent(sentence)
-console.log(sentence)
-console.log(revString)
+
+document.getElementById("demo").innerHTML = sentence + "<br>" + revString;
 
 
+// * Remove periods.
+// * Add the result to the page in the div with the id "Result".
 
-// for (var i = 0; i < sentenceArray.length; i++) {
-    
-//     var word = sentenceArray[i]
-    
-//     var wordRev = reverseWord(word)
+// * Bonus:
+// * Remove all "special characters" (commas, periods, etc).
 
-//     removePeriod(sentence)
-// }
-
-// var revSent = reverseWord(sentence)
-// console.log(sentence)
-// console.log(revSent)
-
-
-// function transformSentence(sentence) {
-//     // Remove the period from the sentence
-//     const cleanSentence = sentence.replace('.', '');
-
-//     // Split the cleaned sentence into words
-//     const words = cleanSentence.split(' ');
-
-//     // Function to reverse a word without using reverse()
-//     function reverseWord(word) {
-//         let reversed = '';
-//         for (let i = word.length - 1; i >= 0; i--) {
-//             reversed += word[i];
-//         }
-//         return reversed;
-//     }
-
-//     // Reverse each word and join them back into a sentence
-//     const transformedWords = words.map(word => reverseWord(word));
-//     return transformedWords.join(' ');
-// }
-
-// const originalSentence = "Otto needs Xanax.";
-// const transformedSentence = transformSentence(originalSentence);
-// console.log(transformedSentence); // Output: "nuR tsaf"
 
