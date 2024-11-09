@@ -1,6 +1,4 @@
-var sentence =  "Otto lost the deed to his house."
-// * "Otto bought a racecar he cannot afford."
-// * "Otto needs Xanax."
+var sentence =  "Otto lost the deed to his house." // * "Otto bought a racecar he cannot afford."// * "Otto needs Xanax."
 
 var sentenceArray = sentence.split(" ")
 
@@ -37,13 +35,16 @@ function removePeriod(sentence) {
 
 var revString = revWordsSent(sentence)
 
-document.getElementById("demo").innerHTML = sentence + "<br>" + revString;
-
+document.getElementById("output").innerHTML = `<span style="color: black;">${sentence}</span><br>` + 
+    `<span style="color: red;">${revString}</span>`;
 
 // * Remove periods.
 // * Add the result to the page in the div with the id "Result".
 
 // * Bonus:
 // * Remove all "special characters" (commas, periods, etc).
+// If the sentence is a palindrome, have it display in red. 
+
+
 
 
