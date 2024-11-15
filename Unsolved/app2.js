@@ -1,4 +1,4 @@
-var sentence =  "Otto lost the deed to his house." // * "Otto bought a racecar he cannot afford."// * "Otto needs Xanax."
+var sentence = "Otto needs Xanax" // "mom mom"
 
 var sentenceArray = sentence.split(" ")
 
@@ -9,8 +9,8 @@ function reverseWord(word) {
     }
     return wordRev
 }
-
-function revWordsSent(sentence) {
+ 
+function revSentence(sentence) {
     var newSentence = removePeriod(sentence)
     var words = newSentence.split(" ")
     var revWords = []
@@ -33,18 +33,38 @@ function removePeriod(sentence) {
     return newSent
 }
 
-var revString = revWordsSent(sentence)
-
-document.getElementById("output").innerHTML = `<span style="color: black;">${sentence}</span><br>` + 
-    `<span style="color: red;">${revString}</span>`;
-
-// * Remove periods.
-// * Add the result to the page in the div with the id "Result".
-
-// * Bonus:
-// * Remove all "special characters" (commas, periods, etc).
-// If the sentence is a palindrome, have it display in red. 
+var sentenceRev = revSentence(sentence)
 
 
 
 
+
+if (isPalindrome(sentence.toLowerCase(), sentenceRev.toLowerCase())) {
+
+    displayInRed(sentenceRev)
+}
+
+function isPalindrome(sentence, sentenceRev) {
+    for (let i = 0; i < sentence.length; i++) {
+        
+        if (sentence[i] !== sentenceRev[i]){
+
+            return false 
+        }
+
+    }
+    return true
+
+}
+
+
+function displayInRed(sentenceRev) {
+    
+    document.getElementById("output").innerHTML = `<span style="color: black;">${sentence}</span><br>` + 
+        `<span style="color: red;">${sentenceRev}</span>`;
+}
+
+
+// Reverse each word in a sentence and display it on the screen in the same order. 
+// For example, the sentence `This is an example` would become `siht si na elpmaxe`. 
+// If the word is a palindrome, have it display in red. Do not use reverse() method.

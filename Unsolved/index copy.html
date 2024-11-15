@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Words and Highlight Palindromes</title>
+    <style>
+        .palindrome {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reverse Each Word in a Sentence</h1>
+    <input type="text" id="sentenceInput" placeholder="Enter your sentence here">
+    <button id="reverseButton">Reverse Words</button>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("reverseButton").onclick = function() {
+            var sentence = document.getElementById("sentenceInput").value;
+            var sentenceRev = revSentence(sentence);
+            var output = '';
+
+            // Split the original sentence into words
+            var words = sentence.split(' ');
+            for (var i = 0; i < words.length; i++) {
+                var wordRev = reverseWord(words[i]); // Reverse each word
+                // If the word is a palindrome, wrap it in a span
+                if (isPalindrome(words[i])) {
+                    output += `<span class="palindrome">${wordRev}</span> `;
+                } else {
+                    output += wordRev + ' ';
+                }
+            }
+
+            // Display the result
+            document.getElementById("output").innerHTML = output.trim();
+        }
+
+        function reverseWord(word) {
+            var wordRev = "";
+            for (var i = word.length - 1; i >= 0; i--) {
+                wordRev += word[i];
+            }
+            return wordRev;
+        }
+
+        function isPalindrome(word) {
+            var normalized = word.toLowerCase(); // Normalize the word
+            var reversed = reverseWord(normalized); // Reverse the normalized word
+            return normalized === reversed; // Check if the word is a palindrome
+        }
+    </script>
+</body>
+</html>
