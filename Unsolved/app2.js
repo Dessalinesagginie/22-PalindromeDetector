@@ -35,36 +35,30 @@ function removePeriod(sentence) {
 
 var sentenceRev = revSentence(sentence)
 
+isPalindrome(sentence.toLowerCase(), sentenceRev.toLowerCase())
 
-
-
-
-if (isPalindrome(sentence.toLowerCase(), sentenceRev.toLowerCase())) {
-
-    displayInRed(sentenceRev)
+function displayInRed(sentence){
+        displayInRed(sentence[i])
 }
 
 function isPalindrome(sentence, sentenceRev) {
     for (let i = 0; i < sentence.length; i++) {
         
         if (sentence[i] !== sentenceRev[i]){
+            word = sentence
+            wordRev = sentenceRev
 
-            return false 
+            document.getElementById("output").innerHTML = `<span style="color: black;">${word}</span><br>` + 
+                `<span style="color: red;">${wordRev}</span>`;
         }
 
     }
     return true
-
 }
-
-
-function displayInRed(sentenceRev) {
-    
-    document.getElementById("output").innerHTML = `<span style="color: black;">${sentence}</span><br>` + 
-        `<span style="color: red;">${sentenceRev}</span>`;
-}
-
 
 // Reverse each word in a sentence and display it on the screen in the same order. 
-// For example, the sentence `This is an example` would become `siht si na elpmaxe`. 
+    
 // If the word is a palindrome, have it display in red. Do not use reverse() method.
+
+
+

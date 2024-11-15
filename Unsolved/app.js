@@ -1,23 +1,39 @@
+var sentence = "Otto needs Xanax"; // Input sentence
+var sentenceArray = sentence.split(" "); // Split the sentence into words
+var palinword = " "; // Initialize an empty string for output
 
-var sentence = "This is an example" 
-var sentSplit = sentence.split(" ")
-var words = []
-words.push(sentSplit)
+// Loop through each word to reverse and check for palindromes
+for (var i = 0; i < sentenceArray.length; i++) {
+    var wordRev = reverseWord(sentenceArray[i]); // Reverse the individual word
 
-for (var i = sentence.length-1; i >=0; i--)
-     { console.log(sentence)
+    // Check if the original word is a palindrome
+    if (isPalindrome(sentenceArray[i])) {
+        palinword += `<span class="palindrome">${wordRev}</span> `; // Highlight in red if palindrome
+    } else {
+        palinword = palinword + sentenceArray[i] + " "; // Just add the reversed word
     }
-    console.log(sentSplit[0])
-var sentence = "This"
-var lettSplit = sentence.split()
-var letters = []
+}
 
-for (var i = sentence.length-1; i >=0; i--)
-    
-    
-    {letters.push(sentSplit)
-       console.log(letters[i])
-   }
+// Display the result
+document.getElementById("output").innerHTML = palinword//.trim(); // Update the output div
+
+// Function to reverse a word without using reverse()
+function reverseWord(word) {
+    var wordRev = " ";
+    for (var i = word.length - 1; i >= 0; i--) {
+        wordRev = wordRev + word[i]; // Append each character in reverse order
+    }
+    return wordRev; // Return the reversed word
+}
+
+// Function to check if a word is a palindrome
+function isPalindrome(wordRev) {
+    var revWord = wordRev.toLowerCase(); // Normalize to lowercase
+    // var wordRev = wordrev.toLowerCase();
+    var wordRev = reverseWord(revWord); // Reverse the normalized word
+    return revWord === wordRev; // Check if they are equal
+}
+   
 
     
 

@@ -25,7 +25,7 @@
             // Split the original sentence into words
             var words = sentence.split(' ');
             for (var i = 0; i < words.length; i++) {
-                var wordRev = reverseWord(words[i]); // Reverse each word
+                var wordRev = reverseWord(words[i]); // Reverse the individual word
                 // If the word is a palindrome, wrap it in a span
                 if (isPalindrome(words[i])) {
                     output += `<span class="palindrome">${wordRev}</span> `;
