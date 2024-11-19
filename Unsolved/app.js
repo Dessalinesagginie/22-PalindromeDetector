@@ -1,40 +1,70 @@
-var sentence = "Otto needs Xanax"; // Input sentence
-var sentenceArray = sentence.split(" "); // Split the sentence into words
-var palinword = " "; // Initialize an empty string for output
 
-// Loop through each word to reverse and check for palindromes
-for (var i = 0; i < sentenceArray.length; i++) {
-    var wordRev = reverseWord(sentenceArray[i]); // Reverse the individual word
+var sentence = "Otto needs Xanax"
+var sentenceArray = sentence.split(" ")
 
-    // Check if the original word is a palindrome
-    if (isPalindrome(sentenceArray[i])) {
-        palinword += `<span class="palindrome">${wordRev}</span> `; // Highlight in red if palindrome
-    } else {
-        palinword = palinword + sentenceArray[i] + " "; // Just add the reversed word
-    }
-}
-
-// Display the result
-document.getElementById("output").innerHTML = palinword//.trim(); // Update the output div
-
-// Function to reverse a word without using reverse()
 function reverseWord(word) {
-    var wordRev = " ";
+    var wordRev = ""
     for (var i = word.length - 1; i >= 0; i--) {
-        wordRev = wordRev + word[i]; // Append each character in reverse order
+        wordRev += word[i]
     }
-    return wordRev; // Return the reversed word
+    return wordRev
 }
 
-// Function to check if a word is a palindrome
-function isPalindrome(wordRev) {
-    var revWord = wordRev.toLowerCase(); // Normalize to lowercase
-    // var wordRev = wordrev.toLowerCase();
-    var wordRev = reverseWord(revWord); // Reverse the normalized word
-    return revWord === wordRev; // Check if they are equal
+function revSentence(sentence) {
+    var newSentence = periodGone(sentence)
+    var words = newSentence.split(" ")
+    var revWords = []
+
+    for (var i = 0; i < words.length; i++) {
+        var wordRev = reverseWord(words[i])
+        revWords.push(wordRev)
+    }
+    return revWords.join(" ")
 }
-   
 
-    
+function periodGone(sentence) {
+    var newSent = "";
+    for (var i = 0; i < sentence.length; i++) {
+        if (sentence[i] !== ".") {
+            newSent = newSent + sentence[i]
+        }
+    }
+    return newSent
+}
 
+function isPalindrome(word) {
+    var lowerCaseWord = word.toLowerCase()
+    var wordRev = reverseWord(lowerCaseWord)
+    return lowerCaseWord === wordRev
+}
+
+function displayResults() {
+    // var sentenceRev = revSentence(sentence)
+    var result = "" 
+    // result = Otto-->ottO (new line)  
+
+    var words = sentence.split(" ")
+    // words = [Otto, needs, Xanax]
+    for (var i = 0; i < words.length; i++) {
+        var word = words[i]
+        // word = Otto; needs
+        var wordRev = reverseWord(word)
+        // wordRev = ottO; sdeen
+
+        result = result + 
+            `<span style="color: black;">${word}</span> <span style="color: grey;">→</span> ` +                   
+            `<span style="color: ${isPalindrome(word) ? 'red' : 'black'};">${wordRev}</span><br>`
+        // result = "" + 
+        //   <span style="color: black;">Otto</span> <span style="color: grey;">→</span> +
+        //   <span style="color: red;">ottO</span><br>
+        // result =  "" + "Otto -->" + "ottO"
+        
+        // result = Otto→ottO <br> needs→sdeen <br> Xanax→xanaX <br>
+    }
     
+    document.getElementById("output").innerHTML = result
+    // Otto -->Otto
+}
+
+displayResults()
+
