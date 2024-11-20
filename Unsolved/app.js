@@ -1,5 +1,5 @@
 
-var sentence = "Otto needs Xanax"
+var sentence = "Otto bought a racecar he cannot afford." // "Otto needs Xanax"
 var sentenceArray = sentence.split(" ")
 
 function reverseWord(word) {
@@ -52,8 +52,15 @@ function displayResults() {
         // wordRev = ottO; sdeen
 
         result = result + 
-            `<span style="color: black;">${word}</span> <span style="color: grey;">→</span> ` +                   
-            `<span style="color: ${isPalindrome(word) ? 'red' : 'black'};">${wordRev}</span><br>`
+            `<span style="color: black;">${word}</span> <span style="color: grey;">→</span> `                  
+        //     `<span style="color: ${isPalindrome(word) ? 'red' : 'black'};">${wordRev}</span><br>`
+        
+        if (isPalindrome(word)) {
+            result = result + `<span style="color: red;">${wordRev}</span><br>`;
+        } else {
+            result = result + `<span style="color: black;">${wordRev}</span><br>`;
+        }
+
         // result = "" + 
         //   <span style="color: black;">Otto</span> <span style="color: grey;">→</span> +
         //   <span style="color: red;">ottO</span><br>
@@ -61,9 +68,8 @@ function displayResults() {
         
         // result = Otto→ottO <br> needs→sdeen <br> Xanax→xanaX <br>
     }
-    
+
     document.getElementById("output").innerHTML = result
-    // Otto -->Otto
 }
 
 displayResults()
